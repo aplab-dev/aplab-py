@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "aplab"
+version = "0.1.0"
+description = "Interactive Python learning platform"
+authors = ["Your Name <your.email@example.com>"]
+packages = [{include = "aplab"}]  # Add this line
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.41.0"
+pandas = "^2.2.3"
+numpy = "^2.2.0"
+plotly = "^5.24.1"
+matplotlib = "^3.10.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
