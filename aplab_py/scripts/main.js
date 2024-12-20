@@ -5,6 +5,23 @@ let currentLang = localStorage.getItem('language') || 'en';
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Check if language switcher exists
+    const langSwitcher = document.querySelector('.language-switcher');
+    if (!langSwitcher) {
+        console.warn('Language switcher not found in DOM');
+    }
+
+    // Check if language buttons exist
+    const langButtons = document.querySelectorAll('.lang-btn');
+    if (langButtons.length === 0) {
+        console.warn('Language buttons not found');
+    }
+
+    document.querySelectorAll('.lang-btn .feather-icon').forEach(icon => {
+        icon.setAttribute('width', '16');
+        icon.setAttribute('height', '16');
+    });
+
     initLanguage();
     initNavigation();
     initStreamlit();
@@ -14,16 +31,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Language management
 function initLanguage() {
-    changeLanguage(currentLang);
+    // Set initial language
+    const savedLang = localStorage.getItem('language') || 'en';
+    changeLanguage(savedLang);
+    
+    // Make sure buttons are visible and working
+    console.log('Language initialized:', savedLang);
 }
 
 function changeLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('language', lang);
+    
+    // Update content
     updateContent();
     updateLanguageButtons();
     updateHTMLLang();
-    updateIframeLanguage();
+    
+    // Log for debugging
+    console.log('Language changed to:', lang);
+}
+
+function updateLanguageButtons() {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        const btnLang = btn.getAttribute('data-lang');
+        if (btnLang === currentLang) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
 }
 
 function updateContent() {
@@ -112,15 +149,14 @@ function initIcons() {
     if (typeof feather !== 'undefined') {
         try {
             feather.replace({
-                'width': 24,
-                'height': 24,
-                'stroke-width': 2
+                'width': 24,        // Use numbers instead of units
+                'height': 24,       // Use numbers instead of units
+                'stroke-width': 2,
+                class: 'feather-icon' // Add a class for easier styling
             });
         } catch (error) {
             console.warn('Error initializing icons:', error);
         }
-    } else {
-        console.warn('Feather icons not loaded');
     }
 }
 

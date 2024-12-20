@@ -9,16 +9,6 @@
     <meta name="description" content="Interactive Python learning platform with hands-on examples">
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button onclick="changeLanguage('en')" class="lang-btn" data-lang="en">
-            <i data-feather="globe"></i> EN
-        </button>
-        <button onclick="changeLanguage('ru')" class="lang-btn" data-lang="ru">
-            <i data-feather="globe"></i> RU
-        </button>
-    </div>
-
     <header>
         <nav class="nav-container">
             <div class="nav-content">
@@ -26,6 +16,20 @@
                     <i data-feather="code"></i>
                     <span class="logo-text">aplab</span>
                     <span class="logo-suffix">.dev</span>
+                </div>
+                <!-- Language Switcher -->
+                <div class="nav-right">
+                    <!-- Language switcher inside nav -->
+                    <div class="language-switcher">
+                        <button onclick="changeLanguage('en')" class="lang-btn" data-lang="en">
+                            <i data-feather="globe"></i>
+                            EN
+                        </button>
+                        <button onclick="changeLanguage('ru')" class="lang-btn" data-lang="ru">
+                            <i data-feather="globe"></i>
+                            RU
+                        </button>
+                    </div>
                 </div>
                 <div class="nav-links">
                     <a href="#fundamentals">
