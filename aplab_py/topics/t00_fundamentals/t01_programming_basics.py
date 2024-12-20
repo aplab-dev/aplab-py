@@ -4,9 +4,9 @@ from typing import List, Dict
 import streamlit as st
 import plotly.graph_objects as go
 import pandas as pd
-from aplab.components.code_editor import CodeEditor
-from aplab.components.visualizations import create_flow_chart
-from aplab.config.styles import (
+from aplab_py.components.code_editor import CodeEditor
+from aplab_py.components.visualizations import create_flow_chart
+from aplab_py.config.styles import (
     COLORS,
     TEXT_STYLES,
     CHART_STYLES

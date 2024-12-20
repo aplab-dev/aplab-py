@@ -3,7 +3,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-from aplab.config.styles import COLORS
+from aplab_py.config.styles import COLORS
 
 
 class CodeEditor:

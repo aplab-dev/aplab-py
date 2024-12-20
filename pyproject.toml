@@ -1,9 +1,9 @@
 [tool.poetry]
-name = "aplab"
+name = "aplab_py"
 version = "0.1.0"
 description = "Interactive Python learning platform"
 authors = ["Your Name <your.email@example.com>"]
-packages = [{include = "aplab"}]  # Add this line
+packages = [{include = "aplab_py"}]  # Add this line
 
 [tool.poetry.dependencies]
 python = "^3.11"

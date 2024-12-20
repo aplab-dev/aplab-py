@@ -1,6 +1,6 @@
 import plotly.graph_objects as go
 
-from aplab.config.styles import CHART_STYLES, TEXT_STYLES
+from aplab_py.config.styles import CHART_STYLES, TEXT_STYLES
 
 
 def create_flow_chart(nodes, x_positions=None):

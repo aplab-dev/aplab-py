@@ -46,7 +46,7 @@ poetry install
 4. Run the application:
 ```bash
 poetry shell
-streamlit run aplab/app.py
+streamlit run aplab_py/app.py
 ```
 
 ## 💻 Development

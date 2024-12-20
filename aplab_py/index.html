@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aplab.dev - Python Learning Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Interactive Python learning platform with hands-on examples">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button onclick="changeLanguage('en')" class="lang-btn" data-lang="en">
+            <i data-feather="globe"></i> EN
+        </button>
+        <button onclick="changeLanguage('ru')" class="lang-btn" data-lang="ru">
+            <i data-feather="globe"></i> RU
+        </button>
+    </div>
+
+    <header>
+        <nav class="nav-container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i data-feather="code"></i>
+                    <span class="logo-text">aplab</span>
+                    <span class="logo-suffix">.dev</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#fundamentals">
+                        <i data-feather="book"></i>
+                        <span data-i18n="nav_fundamentals">Fundamentals</span>
+                    </a>
+                    <a href="#basics">
+                        <i data-feather="terminal"></i>
+                        <span data-i18n="nav_basics">Basics</span>
+                    </a>
+                    <a href="#control-flow">
+                        <i data-feather="git-branch"></i>
+                        <span data-i18n="nav_control_flow">Control Flow</span>
+                    </a>
+                    <a href="#data-structures">
+                        <i data-feather="database"></i>
+                        <span data-i18n="nav_data_structures">Data Structures</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="gradient-text" data-i18n="hero_title">Interactive Python Learning</h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Master Python through hands-on practice</p>
+                <div class="hero-buttons">
+                    <a href="#lab-content" class="button primary">
+                        <i data-feather="play"></i>
+                        <span data-i18n="start_learning">Start Learning</span>
+                    </a>
+                    <a href="https://aplab.dev" class="button secondary">
+                        <i data-feather="home"></i>
+                        <span data-i18n="main_site">Main Site</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-background"></div>
+        </section>
+
+        <section id="lab-content">
+            <div class="streamlit-container">
+                <div class="loading-indicator">
+                    <i data-feather="loader"></i>
+                    <span data-i18n="loading">Loading...</span>
+                </div>
+                <iframe 
+                    src="https://ap-lab.streamlit.app?embed=true"
+                    frameborder="0"
+                    width="100%"
+                    height="800"
+                    allowtransparency="true">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i data-feather="code"></i>
+                    <span>aplab.dev</span>
+                </div>
+                <p data-i18n="footer_tagline">Making Python learning interactive</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://aplab.dev">
+                    <i data-feather="home"></i>
+                    <span data-i18n="footer_main">Main Site</span>
+                </a>
+                <a href="https://github.com/aplab-dev">
+                    <i data-feather="github"></i>
+                    <span data-i18n="footer_github">GitHub</span>
+                </a>
+                <a href="mailto:hello@aplab.dev">
+                    <i data-feather="mail"></i>
+                    <span data-i18n="footer_contact">Contact</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 aplab.dev</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"></script>
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
